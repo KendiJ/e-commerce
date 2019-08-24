@@ -217,7 +217,8 @@ class _ProductDetailsState extends State<ProductDetails> {
           new ListTile(
             title: new Text("Product details"),
             subtitle: new Text(
-                "This is simply a summery of your product. As a dummy App we are just using plane words to check the functionality of the app, but we'll definetly add more content. thank you"),
+                "This is simply a summery of your product. As a dummy App we are just using plane "
+                    "words to check the functionality of the app, but we'll definetly add more content. thank you"),
           ),
 
           Divider(),
