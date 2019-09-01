@@ -4,6 +4,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 //imports
 import 'package:bizz_app/components/horizontal_listView.dart';
 import 'package:bizz_app/components/products.dart';
+import 'package:bizz_app/pages/cart.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
           AssetImage('images/w3.jpeg'),
           AssetImage('images/w4.jpeg'),
         ],
-        autoplay: true,
+        autoplay: false,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 2000),
         dotSize: 4.0,
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
         elevation: 0.0,
         backgroundColor: Colors.red,
-        title: new Text('BizzApp'),
+        title: new Text('GSM Shopping'),
         actions: <Widget>[
           new IconButton(
               icon: Icon(
@@ -58,7 +59,9 @@ class _HomePageState extends State<HomePage> {
                 Icons.shopping_cart,
                 color: Colors.black,
               ),
-              onPressed: () {})
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              })
         ],
       ),
       drawer: new Drawer(
@@ -105,7 +108,9 @@ class _HomePageState extends State<HomePage> {
             ),
 
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
                 title: Text('Shopping cart'),
                 leading: Icon(Icons.shopping_cart),
@@ -136,7 +141,7 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: () {},
               child: ListTile(
-                title: Text('About'),
+                title: Text('About us'),
                 leading: Icon(
                   Icons.help,
                   color: Colors.blue,
@@ -146,27 +151,33 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: new ListView(
+      body: new Column(
         children: <Widget>[
-          image_carousel,
+   // ===image carousel starts here======
+      //    image_carousel,
+   // padding widget
           new Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: new Text('Categories'),
+            padding: const EdgeInsets.all(4.0),
+            child: Container(
+                alignment: Alignment.centerLeft,
+                child: new Text('Categories')),
           ),
           // Horizontal list view starts here
 
           HorizontalList(),
 
           new Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: new Text('Recent Products'),
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              child: new Text('Recent Products'),
+            )
+
           ),
 
           // grid view here
-          Container(
-            height: 320.0,
-            child: Products(),
-          )
+          Flexible(child: Products()),
+
         ],
       ),
     );

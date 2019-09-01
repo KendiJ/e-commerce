@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "597827545070",
+    "firebase_url": "https://gsm-shopping.firebaseio.com",
+    "project_id": "gsm-shopping",
+    "storage_bucket": "gsm-shopping.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597827545070:android:66ec4e095609ab1f",
+        "android_client_info": {
+          "package_name": "com.example.bizz_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597827545070-0gs5qedl2sauphrrvkd0museoetd5ki3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bizz_app",
+            "certificate_hash": "90c89d7c9787410a39b64439a1cb63aaed29c7f9"
+          }
+        },
+        {
+          "client_id": "597827545070-5q6h9b5fbphhaadan6t12nu3komr0vka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKbGwTfhWVsr8X1Yii1H1Nr6U9JZKMVI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597827545070-5q6h9b5fbphhaadan6t12nu3komr0vka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
